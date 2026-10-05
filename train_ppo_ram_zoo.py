@@ -12,8 +12,8 @@ def train(run):
     model = PPO('MlpPolicy', train_env, seed=42 + run, device='cpu', tensorboard_log='./runs/logs/')
     model.learn(total_timesteps=10_000_000, progress_bar=True)
 
-    model.save(f'runs/ppo_ram/ppo_ram_{run}')
-    train_env.save(f'runs/ppo_ram/ppo_ram_vec_normalize_{run}.pkl')
+    model.save(f'runs/ppo_ram_zoo/{run}')
+    train_env.save(f'runs/ppo_ram_zoo/vec_normalize_{run}.pkl')
 
 if __name__ == '__main__':
     train(5)
