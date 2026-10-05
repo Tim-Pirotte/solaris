@@ -24,7 +24,6 @@ def train(run):
         n_epochs=4,
         learning_rate=linear_schedule(2.5e-4),
         clip_range=linear_schedule(0.1),
-        vf_coef=0.5,
         ent_coef=0.01,
     )
 
